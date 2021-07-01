@@ -5,7 +5,7 @@ import databaseConnect from './config/database';
 
 const app = express();
 
-const PORT = 3001;
+const PORT = 5000;
 
 databaseConnect();
 
