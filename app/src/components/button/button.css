@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.botao{
+  border: 1px solid #7AC14E;
+  color: #7AC14E;
+  background-color: unset;
+  border-radius: 2px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.botao:hover{
+  border: 1px solid white;
+  color: white;
+  background-color: #7AC14E;
+  border-radius: 2px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+} 
