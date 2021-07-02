@@ -9,15 +9,23 @@ interface IUser extends Document {
     password: string
 }
 
+// O q vai ter no banco dos usuários
+
 const userSchema = new Schema<IUser>({
     username: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        trim: true, 
+        minLength: 5,
+        maxLength: 20
     },
     name: {
         type: String,
-        required: true
+        required: true, 
+        trim: true,
+        minLength: 5,
+        maxLength: 20
     },
     email: {
         type: String,
@@ -28,6 +36,7 @@ const userSchema = new Schema<IUser>({
         required: true
     }
 });
+// Cripitografar as senhas
 
 userSchema.pre<IUser>('save', async function (next) {
     const user = this;
