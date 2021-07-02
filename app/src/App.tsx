@@ -10,7 +10,7 @@ function App() {
   return (
   <div>
     Hello World
-  <Button onClick={Teste}> Estou funcionando</Button>
+  <Button onClick={Teste}>Cadastrar</Button>
   </div>
   );
 }
