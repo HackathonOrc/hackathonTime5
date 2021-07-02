@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.inputText {
+    padding: 6px 0;
+    border: none;
+    border-bottom: 2px solid #a1a1a1;
+    height: 25px;
+
+    overflow: visible;
+    font-size: 25px;
+    font-weight: bold;
+
+    opacity: 1; /* Firefox */
+    color: #a1a1a1;
+}
+.inputText::placeholder {
+    overflow: visible;
+}
+input:focus {
+    outline: none;
+}

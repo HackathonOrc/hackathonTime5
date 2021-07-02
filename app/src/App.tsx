@@ -1,17 +1,21 @@
-import Button from "./components/button/button";
-import Link from "./components/link/link";
+import Button from "./components/button/Button";
+import Input from "./components/input/Input";
+import { useState } from 'react';
 
 function App() {
-  
-  function Teste (){
-    alert('funcionou');
+
+  const [input, setInput] = useState("");
+
+  function Teste() {
+    alert(input);
   }
 
   return (
-  <div>
-    Hello World
-  <Link onClick={Teste}>Clique aqui</Link>
-  </div>
+    <div>
+      <Input value={input} label="Nome" onChange={e => setInput(e.target.value)} />
+      Hello World
+      <Button onClick={Teste}>Cadastrar</Button>
+    </div>
   );
 }
 
