@@ -1,5 +1,5 @@
 import Button from "./components/button/button";
-
+import Link from "./components/link/link";
 
 function App() {
   
@@ -10,7 +10,7 @@ function App() {
   return (
   <div>
     Hello World
-  <Button onClick={Teste}>Cadastrar</Button>
+  <Link onClick={Teste}>Clique aqui</Link>
   </div>
   );
 }

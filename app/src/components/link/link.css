@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.hiperlink{
+  color: #7AC14E;
+  background-color: unset;
+  font-family: 'Montserrat', sans-serif;
+  border: 0px;
+  text-decoration: underline;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.hiperlink:hover{
+  cursor: pointer;
+}
