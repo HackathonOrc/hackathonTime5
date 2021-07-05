@@ -8,15 +8,16 @@ type PostcardProps = {
   texto: string;
   /**preenchimento do coração do like*/
   isFilled: boolean;
+  /**açao do botao de curtida */
+  onClick: VoidFunction;
 }
 
 
-function PostCard ({titulo, texto, isFilled}:PostcardProps){
+function PostCard ({titulo, texto, isFilled, onClick}:PostcardProps){
 
   var image;
-  const [fill, setFill] = useState(isFilled);
 
-  if (fill===true) {
+  if (isFilled===true) {
     image = "./images/liked.png";
   }
   else {
@@ -27,10 +28,10 @@ function PostCard ({titulo, texto, isFilled}:PostcardProps){
 
   return(
     <div className="postcard">
-      <div className="titulo">{titulo}</div>
-      <div className="texto">{texto}</div>
+      <h3 className="titulo">{titulo}</h3>
+      <p className="texto">{texto}</p>
       <div className="cardbotton">     
-        <img className="like" src={image} onClick={()=>{setFill(!fill)}} alt="Like Button"/>
+        <img className="like" src={image} onClick={onClick} alt="Like Button"/>
       </div>
     </div>
   )

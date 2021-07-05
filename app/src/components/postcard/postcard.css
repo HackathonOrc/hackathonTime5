@@ -4,7 +4,7 @@
   width: 144px;
   height: 33px;
   padding-left: 110px;
-  padding-top: 25px;
+  margin-bottom: 0px;
   
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -18,9 +18,11 @@
 
 .texto {
   width: 491px;
-  height: 74px;
+  max-width: 491px;
+  max-height: 74px;
   padding-left: 110px;
-  padding-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -29,14 +31,13 @@
   line-height: 23px;
 
   color: #5E5E5E;
+  word-break:break-all;
 
-  max-width: 610px;
 }
 
 .postcard {
   width: 673px;
   height: 193px;
-
 
   background: #FFFFFF;
   border: 2px solid #70E864;
@@ -52,14 +53,13 @@
   width: 35px;
   height: 35px;
   padding-left: 608px;
-  padding-bottom: 30px;
 }
 
 .like{
   width: 35px;
   height: 35px;
   justify-content: space-between;
-
+  padding-bottom: 30px;
 }
 
 .like:hover{
