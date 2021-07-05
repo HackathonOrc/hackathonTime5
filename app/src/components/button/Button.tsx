@@ -9,14 +9,12 @@ type ButtonProps = {
   onClick: VoidFunction;
 }
 
-function Button ({children, onClick}: ButtonProps){
+function Button({ children, onClick }: ButtonProps) {
 
   return (
-    <div>
-      <button className="botao" onClick={onClick}>
-        {children}
-      </button>
-    </div> 
+    <button className="botao" onClick={onClick}>
+      {children}
+    </button>
   )
 }
-export default Button; 
+export default Button;
