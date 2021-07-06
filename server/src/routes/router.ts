@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 // importa as rotas
 import homeRoutes from './homeRoutes';
-const userRoute = require ('../routes/userRoute')
+import userRoute from './userRoute';
 
 const router = Router();
 

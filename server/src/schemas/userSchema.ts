@@ -2,8 +2,6 @@ import { Schema, model, Document, modelNames } from "mongoose";
 
 import * as bcrypt from "bcryptjs";
 
-const validator = require("mongoose-validator");
-
 interface IUser extends Document {
     username: string,
     name: string,
@@ -32,12 +30,7 @@ const userSchema = new Schema<IUser>({
     email: {
         type: String,
         required: true,
-        validate: [
-            validator({
-                validator: 'isEmail',
-                message: 'Por favor coloque um email válido'
-            })
-        ],
+        
     },
     password: {
         type: String,
