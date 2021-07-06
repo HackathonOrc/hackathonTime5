@@ -19,7 +19,7 @@ export default class questionsControllers { // mudar pra like controller
             res.status(400).json({ message: 'Ocorreu um erro ao pegar todas as questões!' });
         }
     }
-    // pega pelo id umm item específico do banco 
+    // pega pelo id um item específico do banco 
     getOneQuestion = async (req: Request, res: Response) => {
         try {
             const item = await FinalQuestions.findById(req.params.id);
