@@ -2,6 +2,7 @@ import Button from "./components/button/Button";
 import Input from "./components/input/Input";
 import { useState } from 'react';
 import PostCard from './components/postcard/Postcard';
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   var like = false; //variável que definirá se o coração do like será preenchido ou não

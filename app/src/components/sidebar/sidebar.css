@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.wrapper{
+  
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 16%;
+  height: 100%;  
+  background: #0F210A;
+
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.username{
+  color: white;
+  text-align: center;
+  width: 340px;
+  height: 18px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.nome{
+  color: white;
+  text-align: center;
+  width: 340px;
+  height: 32px;
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.icons{
+  display: -webkit-flex;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.homeIcon{
+  width: 32px;
+  height: 29px;
+  margin: auto;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.home{
+  background-color: unset;
+  color: white;
+  border: 0;
+  width: fit-content;
+  height: fit-content;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
