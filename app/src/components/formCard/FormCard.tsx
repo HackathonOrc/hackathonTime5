@@ -2,7 +2,9 @@ import { ReactNode } from 'react'
 import './formCard.css';
 
 type FormCardProps = {
+    /** Selecionador da imagem do Orc'inho */
     image: 1 | 2 | 3;
+    /** Conteúdo do FormCard */
     children?: ReactNode;
 }
 
