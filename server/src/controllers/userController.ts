@@ -21,31 +21,31 @@ export default class userController {
     getOneUser = async (req: Request, res: Response) => {
         try {
             const item = await User.findById(req.params.id);
-            if(!item){
-                res.status(400).json({message: 'Usuário não encontrado'});
+            if (!item) {
+                res.status(400).json({ message: 'Usuário não encontrado' });
             }
         } catch (error) {
-            res.status(400).json({message: 'Erro ao pegar usuário'});
+            res.status(400).json({ message: 'Erro ao pegar usuário' });
         }
     }
     updateUser = async (req: Request, res: Response) => {
         const { id } = req.params;
         try {
             const user = await User.findById(id);
-            if(!user)
-                res.status(400).json({message: 'Não foi possível atualizar o usuário'});
-            
+            if (!user)
+                res.status(400).json({ message: 'Não foi possível encontrar o usuário' });
+
             await User.updateOne(req.body);
-            res.status(200).json({ error : 'Usuário atualizado com sucesso'});
+            res.status(200).json({ error: 'Usuário atualizado com sucesso' });
         } catch (error) {
-            res.status(400).json({ error: 'Ocorreu um erro ao atualizar o usuário'});
+            res.status(400).json({ error: 'Ocorreu um erro ao atualizar o usuário' });
         }
     }
-    deleteUser = async (req: Request, res: Response) =>{
+    deleteUser = async (req: Request, res: Response) => {
         try {
             await User.findByIdAndDelete(req.params.id);
         } catch (error) {
-            res.status(200).json({ message: 'Usuário deletado com sucesso'});
+            res.status(200).json({ message: 'Ocorreu um erro ao deletar o usuário' });
         }
     }
 }
