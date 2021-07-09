@@ -4,6 +4,7 @@ import { useState } from 'react';
 import PostCard from './components/postcard/Postcard';
 import Sidebar from "./components/sidebar/Sidebar";
 import FormCard from "./components/formCard/FormCard";
+import api from './services/api';
 
 function App() {
   var like = false; //variável que definirá se o coração do like será preenchido ou não
@@ -11,8 +12,11 @@ function App() {
   const [input, setInput] = useState("");
   const [fill, setFill] = useState(like);
 
-  function Teste() {
-    alert(input);
+  async function Teste() {
+    const result = await api.get('/user/');
+    const data = result.data;
+    console.log(data);
+    alert(data[0].email);
   }
 
   return (
