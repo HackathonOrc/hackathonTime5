@@ -4,12 +4,15 @@ import { useState } from 'react';
 import PostCard from '../components/postcard/Postcard';
 import FormCard from "../components/formCard/FormCard";
 import api from '../services/api';
+import InputPost from "../components/inputPost/inputPost";
 
 const Home = () => {
     var like = false; //variável que definirá se o coração do like será preenchido ou não
 
     const [input, setInput] = useState("");
     const [fill, setFill] = useState(like);
+    const [inputPost, setInputPost] = useState("");
+
 
     async function Teste() {
         const result = await api.get('/user/');
@@ -21,7 +24,7 @@ const Home = () => {
     return (
         <div>
             <Input value={input} label="Nome" onChange={e => setInput(e.target.value)} />
-            Hello World
+            <InputPost value={inputPost} label={"Escreva aqui..."} onChange={e => setInputPost(e.target.value)} name={"Usuário"} onClick={ () => {alert(inputPost)}}></InputPost>
             <Button onClick={Teste}>Cadastrar</Button>
             <PostCard titulo="username" texto="tweet aqui" isFilled={fill} onClick={() => { setFill(!fill) }}></PostCard>
             <FormCard image={3}>
